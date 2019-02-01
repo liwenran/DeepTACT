@@ -21,7 +21,7 @@ python DeepTACT.py demo P-E 3
 ```
 We evaluate the ensemble model with a voting strategy. Given the information of a sample as an input, its final prediction score is the average of the prediction scores derived from all classifiers.
 
-# Improve the resolution of PCHi-C data
+# Application: predict promoter-level interactions from PCHi-C data
 We apply the trained DeepTACT model to infer contacts between regulatory elements in situations where one or both interaction regions contain multiple regulatory elements. In this way, we predict promoter-level interactions from bin-level interactions. For each cell line, the promoter-level interactions are predicted and saved in 'predictions.csv' files (e.g. DeepTACT/Mon/P-E/predictions.csv).
 
 # Requirements
