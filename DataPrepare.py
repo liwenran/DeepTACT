@@ -114,6 +114,11 @@ def main():
 	"""One-hot encoding"""
 	sequence_dict = SeqIO.to_dict(SeqIO.parse(open('hg19.fa'), 'fasta'))
 	encoding(sequence_dict, 'pairs_train_augment.csv')
+	"""DNase data process"""
+	#Please use the tool, openanno: http://bioinfo.au.tsinghua.edu.cn/openness/anno/
+	#The input for openanno is the position of regions formatted in a '.bed' file (i.e. column 1-3 and 5-7 in CELL/TYPE/pairs.cvs)
+	#To derive the input for DeepTACT, please select "Per-base pair annotation" option when using openanno
+	#The output of openanno is the basepair-level DNase scores of the given promoters or enhancers in .gz file, then load and save it into .npz format as did for sequence data
 
 """RUN"""
 main()
